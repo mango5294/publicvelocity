@@ -16,7 +16,7 @@ show-max-players = 20
 online-mode = false
 
 # Should the proxy enforce the new public key security standard? By default, this is on.
-force-key-authentication = true
+force-key-authentication = false
 
 # If client's ISP/AS sent from this proxy is different from the one from Mojang's
 # authentication server, the player is kicked. This disallows some VPN and proxy
@@ -77,13 +77,12 @@ enable-player-address-logging = true
 [servers]
 # Configure your servers here. Each key represents the server's name, and the value
 # represents the IP address of the server to connect to.
-auth = "127.0.0.1:25566"
 lobby = "fr.mpl.3.overnode.fr:25575"
 
 
 # In what order we should try servers when a player logs in or is kicked from a server.
 try = [
-    "auth"
+    "lobby"
 ]
 
 [forced-hosts]
